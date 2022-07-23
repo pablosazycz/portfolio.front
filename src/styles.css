@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+  
+  #profesion {
+    margin-left: 25%;
+    color: blue;
+  }
+  
+  #nombre {
+    margin-left: 25%;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  #imagen-about {
+    height: auto;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    margin: 0px auto;
+    padding: 100px 0px;
+    -ms-flex-item-align: center;
+        /*-ms-grid-row-align: center;*/
+        align-self: center;
+  }
+  
+  #fotomia {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 50%;
+    padding: 1%;
+    margin: 0px auto;
+    width: 50%;
+    height: auto;
+  }
+  
+  #about {
+    -ms-flex-item-align: center;
+       /* -ms-grid-row-align: center;*/
+        align-self: center;
+    height: auto;
+    margin: 0px auto;
+    padding: 100px 0px;
+  }
+  /*# sourceMappingURL=custom.css.map */
