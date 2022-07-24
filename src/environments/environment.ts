@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  eduUrl: 'http://localhost:8080/educacion/1',
-  authURL: 'http://localhost:8080/auth/'
+  production: true,
+  eduUrl: 'https://calm-headland-19303.herokuapp.com/educacion/1',
+  authURL: 'https://calm-headland-19303.herokuapp.com/auth/'
 
 };
 
