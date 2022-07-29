@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
-import { Observable } from 'rxjs';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { TokenService } from '../servicios/token.service';
 
 @Injectable({
@@ -14,13 +13,11 @@ export class LoginGuard implements CanActivate {
   ) { }
 
   
-  canActivate(
-    next: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean  {
-      if(this.tokenService.isLogged()){
-        this.router.navigate(['/']);
-        return false;
-      }
+  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    if (this.tokenService.isLogged()) {
+      this.router.navigate(['/']);
+      return false;
+    }
     return true;
   }
   

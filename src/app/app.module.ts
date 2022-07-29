@@ -9,12 +9,14 @@ import { EducacionComponent } from './componentes/educacion/educacion.component'
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PorfolioComponent } from './componentes/porfolio/porfolio.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { InterceptorService } from './servicios/interceptor.service';
 import { RegistroComponent } from './auth/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
 import { LoginComponent } from './auth/login.component';
 import { interceptorProvider } from './interceptors/prod-interceptor.service';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -22,6 +24,22 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { EditarEducacionComponent } from './componentes/educacion/editar-educacion.component';
 import { NuevoEducacionComponent } from './componentes/educacion/nuevo-educacion.component';
+import { ExperienciaLaboralComponent } from './componentes/experiencia-laboral/experiencia-laboral.component';
+import { EditarExperienciaLaboralComponent } from './componentes/experiencia-laboral/editar-experiencia-laboral.component';
+import { NuevoExperienciaLaboralComponent } from './componentes/experiencia-laboral/nuevo-experiencia-laboral.component';
+import { DomicilioComponent } from './componentes/domicilio/domicilio/domicilio.component';
+import { NuevodomicilioComponent } from './componentes/domicilio/nuevodomicilio/nuevodomicilio.component';
+import { EditardomicilioComponent } from './componentes/domicilio/editardomicilio/editardomicilio.component';
+import { PersonaComponent } from './componentes/persona/persona.component';
+
+import { ProyectoComponent } from './componentes/proyecto/proyecto.component';
+import { NuevoproyectoComponent } from './componentes/proyecto/nuevoproyecto/nuevoproyecto.component';
+
+import { NuevaTecnologiaComponent } from './componentes/tecnologia/nueva-tecnologia/nueva-tecnologia.component';
+import { EditarTecnologiaComponent } from './componentes/tecnologia/editar-tecnologia/editar-tecnologia.component';
+import { TecnologiaComponent } from './componentes/tecnologia/tecnologia.component';
+import { EditarpersonaComponent } from './componentes/persona/editarpersona/editarpersona.component';
+import { EditaroproyectoComponent } from './componentes/proyecto/editarproyecto/editarproyecto.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +53,20 @@ import { NuevoEducacionComponent } from './componentes/educacion/nuevo-educacion
     IndexComponent,
     EditarEducacionComponent,
     NuevoEducacionComponent,
+    ExperienciaLaboralComponent,
+    EditarExperienciaLaboralComponent,
+    NuevoExperienciaLaboralComponent,
+    DomicilioComponent,
+    NuevodomicilioComponent,
+    EditardomicilioComponent,
+    PersonaComponent,
+    EditarpersonaComponent,
+    ProyectoComponent,
+    NuevoproyectoComponent,
+    EditaroproyectoComponent,
+    NuevaTecnologiaComponent,
+    EditarTecnologiaComponent,
+    TecnologiaComponent,
   ],
   imports: [
     BrowserModule,

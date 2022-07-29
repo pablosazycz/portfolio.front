@@ -1,0 +1,140 @@
+
+#navegacion {
+    background: -webkit-gradient(linear, left top, right top, from(black), to(grey));
+    background: linear-gradient(to right, black, grey);
+  }
+  
+  #sidebar {
+    background: -webkit-gradient(linear, left top, right top, from(black), to(grey));
+    background: linear-gradient(to right, black, grey);
+  }
+  
+  #face {
+    margin-right: 2%;
+    -webkit-transition: -webkit-transform 1.0s;
+    transition: -webkit-transform 1.0s;
+    transition: transform 1.0s;
+    transition: transform 1.0s, -webkit-transform 1.0s;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+  }
+  
+  #face:hover {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+  
+  #insta {
+    margin-right: 2%;
+  }
+  
+  #whats {
+    margin-right: 2%;
+  }
+  
+  #login {
+    margin-right: 2%;
+  }
+  
+  #logo:hover {
+    background-color: transparent;
+    position: relative;
+    -webkit-animation-name: movimiento;
+            animation-name: movimiento;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+  
+  @-webkit-keyframes movimiento {
+    0% {
+      background-color: transparent;
+      left: 0px;
+      top: 0px;
+    }
+    50% {
+      background-color: transparent;
+      left: 50px;
+      top: 0px;
+    }
+    100% {
+      background-color: transparent;
+      left: 0px;
+      top: 0px;
+    }
+  }
+  
+  @keyframes movimiento {
+    0% {
+      background-color: transparent;
+      left: 0px;
+      top: 0px;
+    }
+    50% {
+      background-color: transparent;
+      left: 50px;
+      top: 0px;
+    }
+    100% {
+      background-color: transparent;
+      left: 0px;
+      top: 0px;
+    }
+  }
+  
+  #banner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+    background-image: url(/image/fondo.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  #saludo {
+    width: 95%;
+    height: auto;
+    border: 3px solid white;
+    -webkit-box-shadow: 1px 1px 10px white, -1px -1px 10px white;
+            box-shadow: 1px 1px 10px white, -1px -1px 10px white;
+    background-color: rgba(255, 255, 255, 0.45);
+  }
+  
+  #profesion {
+    margin-left: 25%;
+    color: blue;
+  }
+  
+  #nombre {
+    margin-left: 25%;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  #imagen-about {
+    height: auto;
+    width: auto;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    margin: 2rem auto;
+    padding: 1px 0;
+    
+  }
+  
+  #fotomia {
+  
+    display: flex;
+    border-radius: 50%;
+    padding: 1%;
+    margin: auto 1rem;
+    width: 20rem;
+    
+  }
+  
+
+  /*# sourceMappingURL=custom.css.map */

@@ -1,1 +1,53 @@
 <p>editar-educacion works!</p>
+<div class="container" *ngIf="educacion">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="titulo">titulo</label>
+                    <input type="text" name="titulo" class="form-control" id="titulo" [(ngModel)]="educacion.titulo"
+                        required />
+                </div>
+                <div class="form-group">
+                    <label for="pais">pais</label>
+                    <input type="text" name="pais" class="form-control" id="pais" [(ngModel)]="educacion.pais"
+                        required />
+                </div>
+                <div class="form-group">
+                        <label for="tipo_estudio">tipo_estudio</label>
+                        <input type="text" name="tipo_estudio" class="form-control" id="tipo_estudio"
+                            [(ngModel)]="educacion.tipo_estudio" required />
+                </div>
+                <div class="form-group">
+                            <label for="area_estudio">area_estudio</label>
+                            <input type="text" name="area_estudio" class="form-control" id="area_estudio"
+                                [(ngModel)]="educacion.area_estudio" required />
+                </div>
+                <div class="form-group">
+                                <label for="institucion">institucion</label>
+                                <input type="text" name="institucion" class="form-control" id="institucion"
+                                    [(ngModel)]="educacion.institucion" required />
+                </div>
+                <div class="form-group">
+                                    <label for="estado_estudio">estado_estudio</label>
+                                    <input type="text" name="estado_estudio" class="form-control" id="estado_estudio"
+                                        [(ngModel)]="educacion.estado_estudio" required />
+                </div>
+                <div class="form-group">
+                                        <label for="fecha_inicio">fecha_inicio</label>
+                                        <input type="text" name="fecha_inicio" class="form-control" id="fecha_inicio"
+                                            [(ngModel)]="educacion.fecha_inicio" required />
+                </div>
+                <div class="form-group">
+                                            <label for="fecha_finalizacion">fecha_finalizacion</label>
+                                            <input type="text" name="fecha_finalizacion" class="form-control"
+                                                id="fecha_finalizacion" [(ngModel)]="educacion.fecha_finalizacion"
+                                                required />
+                </div>
+                <button type="button" class="btn btn-outline-success btn-block"
+                [disabled]="!f.valid">Actualizar</button>
+            </form>
+                                 
+        </div>
+    </div>
+</div>

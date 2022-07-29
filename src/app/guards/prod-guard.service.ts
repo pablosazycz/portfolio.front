@@ -7,20 +7,21 @@ import { TokenService } from '../servicios/token.service';
   providedIn: 'root'
 })
 export class ProdGuardService {
+ 
   realRol: string;
 
   constructor(
     private tokenService: TokenService,
     private router: Router
   ) { }
-canActivate (route: ActivatedRouteSnapshot,state: RouterStateSnapshot): boolean {
-  const expectedRol = route.data['expectedRol'];
-  this.realRol = this.tokenService.isadmmin() ? 'admin' : 'user';
 
-  if (!this.tokenService.isLogged() || expectedRol.indexOf(this.realRol)<0 ){
-    this.router.navigate(['/']);
-    return false;
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+    const expectedRol = route.data['expectedRol'];
+    this.realRol = this.tokenService.isAdmin() ? 'admin' : 'user';
+    if (!this.tokenService.isLogged() || expectedRol.indexOf(this.realRol) < 0) {
+      this.router.navigate(['/chupala']);
+      return false;
+    }
+    return true;
   }
-  return true;
-}
 }

@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
           timeOut: 3000,
           positionClass: 'toast-top-center',
         });
-        console.log(this.errMsj);
+        console.log(this.errMsj + 'est error');
       }
     );
   }
