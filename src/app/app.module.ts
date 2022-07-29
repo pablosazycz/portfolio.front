@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
@@ -21,7 +22,6 @@ import { getAnalytics } from "firebase/analytics";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ToastrModule } from 'ngx-toastr';
-import { CommonModule } from '@angular/common';
 import { EditarEducacionComponent } from './componentes/educacion/editar-educacion.component';
 import { NuevoEducacionComponent } from './componentes/educacion/nuevo-educacion.component';
 import { ExperienciaLaboralComponent } from './componentes/experiencia-laboral/experiencia-laboral.component';
@@ -69,6 +69,7 @@ import { EditaroproyectoComponent } from './componentes/proyecto/editarproyecto/
     TecnologiaComponent,
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -77,6 +78,7 @@ import { EditaroproyectoComponent } from './componentes/proyecto/editarproyecto/
     FontAwesomeModule,
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    
   ],
   providers: [interceptorProvider],
   bootstrap: [AppComponent],
