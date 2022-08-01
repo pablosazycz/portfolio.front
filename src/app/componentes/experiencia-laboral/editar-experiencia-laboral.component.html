@@ -1,1 +1,67 @@
-<p>editar-experiencia-laboral works!</p>
+<div class="container" *ngIf="experienciaLaboral">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="empresa">Empresa</label>
+                    <input type="text" name="empresa" class="form-control" id="empresa"
+                        [(ngModel)]="experienciaLaboral.empresa" required />
+                </div>
+                <div class="form-group">
+                    <label for="actividad_empresa">actividad_empresa</label>
+                    <input type="text" name="actividad_empresa" class="form-control" id="actividad_empresa"
+                        [(ngModel)]="experienciaLaboral.actividad_empresa" required />
+                </div>
+                <div class="form-group">
+                    <label for="puesto">puesto</label>
+                    <input type="text" name="puesto" class="form-control" id="puesto"
+                        [(ngModel)]="experienciaLaboral.puesto" required />
+                </div>
+                <div class="form-group">
+                    <label for="nivel_experiencia">nivel_experiencia</label>
+                    <input type="text" name="nivel_experiencia" class="form-control" id="nivel_experiencia"
+                        [(ngModel)]="experienciaLaboral.nivel_experiencia" required />
+                </div>
+                <div class="form-group">
+                    <label for="area_puesto">area_puesto</label>
+                    <input type="text" name="area_puesto" class="form-control" id="area_puesto"
+                        [(ngModel)]="experienciaLaboral.area_puesto" required />
+                </div>
+                <div class="form-group">
+                    <label for="pais">pais</label>
+                    <input type="text" name="pais" class="form-control" id="pais" [(ngModel)]="experienciaLaboral.pais"
+                        required />
+                </div>
+                <div class="form-group">
+                    <label for="fecha_inicio">fecha_inicio</label>
+                    <input type="date" name="fecha_inicio" class="form-control" id="fecha_inicio"
+                        [(ngModel)]="experienciaLaboral.fecha_inicio" required />
+                </div>
+                <div class="form-group">
+                    <label for="fecha_finalizacion">fecha_finalizacion</label>
+                    <input type="date" name="fecha_finalizacion" class="form-control" id="fecha_finalizacion"
+                        [(ngModel)]="experienciaLaboral.fecha_finalizacion"  required />
+                    
+                </div>
+                <div class="form-group">
+                    <label for="descripcion_tarea">descripcion_tarea</label>
+                    <input type="text" name="descripcion_tarea" class="form-control" id="descripcion_tarea"
+                        [(ngModel)]="experienciaLaboral.descripcion_tarea" required />
+                </div>
+                <div class="form-group">
+                    <label for="personas_cargo">personas_cargo</label>
+                    <input type="text" name="personas_cargo" class="form-control" id="personas_cargo"
+                        [(ngModel)]="experienciaLaboral.personas_cargo" required />
+                </div>
+                <div class="form-group">
+                    <label for="urlImagen">urlImagen</label>
+                    <input type="text" name="urlImagen" class="form-control" id="urlImagen"
+                        [(ngModel)]="experienciaLaboral.urlImagen" required />
+                </div>
+                <button type="submit" class="btn btn-outline-success btn-block"
+                    [disabled]="!f.valid">Actualizar</button>
+            </form>
+
+        </div>
+    </div>
+</div>

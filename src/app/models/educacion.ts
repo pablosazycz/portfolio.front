@@ -11,7 +11,7 @@ export class Educacion {
   fecha_inicio: string; //cuando comenzo
 
   fecha_finalizacion: string; //cuando termino
-
+  urlImagen: string; //
   constructor(
    
   ) {

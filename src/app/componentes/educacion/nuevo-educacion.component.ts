@@ -23,6 +23,7 @@ export class NuevoEducacionComponent implements OnInit {
   ) {
     this.nuevoForm=this.fb.group({
     titulo :[''],
+    urlImagen :[''],
     pais :[''],
     tipo_estudio:[''],
     area_estudio :[''],
@@ -37,16 +38,7 @@ export class NuevoEducacionComponent implements OnInit {
   ngOnInit(): void {}
 
   onCreate(): void {
-  /*  const educacion = new Educacion(
-      this.titulo,
-      this.pais,
-      this.tipo_estudio,
-      this.area_estudio,
-      this.institucion,
-      this.estado_estudio,
-      this.fecha_inicio,
-      this.fecha_finalizacion
-    );*/
+ 
     this.educacionService.save(this.nuevoForm.value).subscribe(
       (data) => {
         this.toastr.success('Educacion Creada', 'OK', { timeOut: 3000 });

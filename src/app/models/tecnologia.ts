@@ -3,19 +3,19 @@ export class Tecnologia {
   nombre: string;
   tecnologia: string;
   porcentaje: number;
-  UrlImagen: string;
+  urlImagen: string;
 
   constructor(
     id: number,
     nombre: string,
     tecnologia: string,
     porcentaje: number,
-    UrlImagen: string
+    urlImagen: string
   ) {
     this.id = id;
     this.nombre = nombre;
     this.tecnologia = tecnologia;
     this.porcentaje = porcentaje;
-    this.UrlImagen = UrlImagen;
+    this.urlImagen = urlImagen;
   }
 }

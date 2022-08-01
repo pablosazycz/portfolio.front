@@ -1,0 +1,25 @@
+#sidebar {
+    background: -webkit-gradient(linear, left top, right top, from(black), to(grey));
+    background: linear-gradient(to right, black, grey);
+  }
+  
+
+#imagen-about {
+    height: auto;
+    width: auto;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
+    margin: 2rem auto;
+    padding: 1px 0;
+    
+  }
+  
+  #fotomia {
+  
+    display: flex;
+    border-radius: 50%;
+    padding: 1%;
+    margin: auto 1rem;
+    width: 20rem;
+    
+  }

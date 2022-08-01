@@ -10,6 +10,7 @@ export class ExperienciaLaboral {
   fecha_finalizacion: Date; // termino o al presente
   descripcion_tarea: string;     //tareas que hacia
   personas_cargo: number;
+  urlImagen: string; //
 
 constructor(id: number, empresa: string, actividad_empresa: string,
      puesto: string, nivel_experiencia: string, area_puesto: string, pais: string, fecha_inicio:Date,fecha_finalizacion:Date,descripcion_tarea: string, personas_cargo: number){

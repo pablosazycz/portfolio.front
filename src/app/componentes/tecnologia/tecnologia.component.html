@@ -1,1 +1,48 @@
-<p>tecnologia works!</p>
+<div class="container ">
+
+  <h4 class="card-title text-center">Tecnologia</h4>
+  <div class="container shadow p-3 mb-5 bg-body rounded">
+    <!-- Button para Agregar Educacion -->
+    <div class="text-center">
+      <button *ngIf="isAdmin" type="button" class="btn btn-primary" data-bs-toggle="modal"
+        routerLink="tecnologia/nuevo">
+        Agregar Tecnologia
+      </button>
+    </div>
+
+
+    <div class="container p-2 ">
+      <div *ngFor="let Tecnologia of tecnologias" class="row p-2 m-2 border shadow p-3 mb-5 bg-body rounded">
+        <div class="col-2 ">
+          <img  class=" img-fluid " src="{{Tecnologia.urlImagen}}">
+        </div>
+        <div class="col-10 ">
+          <h3>{{Tecnologia.nombre}}</h3>
+          
+          <h5 class="border-bottom">{{Tecnologia.tecnologia}}</h5>
+          <div class="border-bottom text-center">{{Tecnologia.porcentaje}}%</div>
+          
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped  progress-bar-animated" role="progressbar"
+              aria-label="Animated striped example"  aria-valuemin="0" aria-valuemax="100"
+              [style]="mostrarPorcentaje(Tecnologia.porcentaje)">
+            </div>
+          </div>
+          </div>  
+          <div class="col">
+            <!--Boton editar forma de Lapiz - Solo aparece si esta logueado-->
+           <div class="flex-row align-items-center"> <button *ngIf="isAdmin" type="button" class="btn" aria-label="Editar" data-toggle="tooltip" data-placement="right" title="Editar"
+              routerLink="tecnologia/editar/{{Tecnologia.id}}">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+          
+            <!--Boton eliminar forma de tacho de basura - Solo aparece si esta logueado-->
+          <button *ngIf="isAdmin" type="button" class="btn text" aria-label="Eliminar" data-toggle="tooltip" data-placement="right" title="Eliminar"
+              (click)="eliminarTecno(Tecnologia.id)">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>

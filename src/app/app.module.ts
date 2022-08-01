@@ -39,7 +39,7 @@ import { NuevaTecnologiaComponent } from './componentes/tecnologia/nueva-tecnolo
 import { EditarTecnologiaComponent } from './componentes/tecnologia/editar-tecnologia/editar-tecnologia.component';
 import { TecnologiaComponent } from './componentes/tecnologia/tecnologia.component';
 import { EditarpersonaComponent } from './componentes/persona/editarpersona/editarpersona.component';
-import { EditaroproyectoComponent } from './componentes/proyecto/editarproyecto/editarproyecto.component';
+import { EditarproyectoComponent } from './componentes/proyecto/editarproyecto/editarproyecto.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +63,7 @@ import { EditaroproyectoComponent } from './componentes/proyecto/editarproyecto/
     EditarpersonaComponent,
     ProyectoComponent,
     NuevoproyectoComponent,
-    EditaroproyectoComponent,
+    EditarproyectoComponent,
     NuevaTecnologiaComponent,
     EditarTecnologiaComponent,
     TecnologiaComponent,

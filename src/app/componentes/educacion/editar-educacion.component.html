@@ -1,4 +1,3 @@
-<p>editar-educacion works!</p>
 <div class="container" *ngIf="educacion">
     <div class="row mt-5">
         <div class="col-md-4 mx-auto">
@@ -14,37 +13,43 @@
                         required />
                 </div>
                 <div class="form-group">
-                        <label for="tipo_estudio">tipo_estudio</label>
+                        <label for="tipo_estudio">Tipo estudio</label>
                         <input type="text" name="tipo_estudio" class="form-control" id="tipo_estudio"
                             [(ngModel)]="educacion.tipo_estudio" required />
                 </div>
                 <div class="form-group">
-                            <label for="area_estudio">area_estudio</label>
+                            <label for="area_estudio">Area de estudio</label>
                             <input type="text" name="area_estudio" class="form-control" id="area_estudio"
                                 [(ngModel)]="educacion.area_estudio" required />
                 </div>
                 <div class="form-group">
-                                <label for="institucion">institucion</label>
+                                <label for="institucion">Institucion</label>
                                 <input type="text" name="institucion" class="form-control" id="institucion"
                                     [(ngModel)]="educacion.institucion" required />
                 </div>
                 <div class="form-group">
-                                    <label for="estado_estudio">estado_estudio</label>
+                                    <label for="estado_estudio">estado de estudioi</label>
                                     <input type="text" name="estado_estudio" class="form-control" id="estado_estudio"
                                         [(ngModel)]="educacion.estado_estudio" required />
                 </div>
                 <div class="form-group">
-                                        <label for="fecha_inicio">fecha_inicio</label>
-                                        <input type="text" name="fecha_inicio" class="form-control" id="fecha_inicio"
+                                        <label for="fecha_inicio">fecha inicio</label>
+                                        <input type="date" name="fecha_inicio" class="form-control" id="fecha_inicio"
                                             [(ngModel)]="educacion.fecha_inicio" required />
                 </div>
                 <div class="form-group">
-                                            <label for="fecha_finalizacion">fecha_finalizacion</label>
-                                            <input type="text" name="fecha_finalizacion" class="form-control"
+                                            <label for="fecha_finalizacion">fecha finalizacion</label>
+                                            <input type="date" name="fecha_finalizacion" class="form-control"
                                                 id="fecha_finalizacion" [(ngModel)]="educacion.fecha_finalizacion"
                                                 required />
                 </div>
-                <button type="button" class="btn btn-outline-success btn-block"
+                <div class="form-group">
+                    <label for="urlImagen">urlImagen</label>
+                    <input type="text" name="urlImagen" class="form-control"
+                        id="urlImagen" [(ngModel)]="educacion.urlImagen"
+                         />
+</div>
+                <button type="submit" class="btn btn-outline-success btn-block"
                 [disabled]="!f.valid">Actualizar</button>
             </form>
                                  

@@ -1,1 +1,32 @@
-<p>editar-tecnologia works!</p>
+<div class="container" *ngIf="tecnologia">
+    <div class="row mt-5">
+        <div class="col-md-4 mx-auto">
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="form-group">
+                    <label for="nombre">nombre</label>
+                    <input type="text" name="nombre" class="form-control" id="nombre" [(ngModel)]="tecnologia.nombre"
+                        required />
+                </div>
+                <div class="form-group">
+                    <label for="tecnologia">tecnologia</label>
+                    <input type="text" name="tecnologia" class="form-control" id="tecnologia" [(ngModel)]="tecnologia.tecnologia"
+                        required />
+                </div>
+                <div class="form-group">
+                        <label for="porcentaje">Porcentaje</label>
+                        <input type="text" name="porcentaje" class="form-control" id="porcentaje"
+                            [(ngModel)]="tecnologia.porcentaje" required />
+                </div>
+                <div class="form-group">
+                            <label for="urlImagen">urlImagen</label>
+                            <input type="text" name="urlImagen" class="form-control" id="urlImagen"
+                                [(ngModel)]="tecnologia.urlImagen"  />
+                </div>
+                
+                <button type="submit" class="btn btn-outline-success btn-block"
+                [disabled]="!f.valid">Actualizar</button>
+            </form>
+                                 
+        </div>
+    </div>
+</div>

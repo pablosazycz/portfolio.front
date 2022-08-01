@@ -1,1 +1,39 @@
-<p>nueva-tecnologia works!</p>
+<div class="container">
+    <div class="row mt-5">
+      <div class="col-md-4 mx-auto">
+        <form (ngSubmit)="onCreate()" [formGroup]="nuevoForm" novalidate #f="ngForm">
+            <div class="form-group">
+                <label for="nombre">nombre</label>
+                <input type="text" name="nombre" class="form-control" id="nombre" formControlName="nombre"
+                    required />
+            </div>
+            <div class="form-group">
+                <label for="tecnologia">tecnologia</label>
+                <input type="text" name="tecnologia" class="form-control" id="tecnologia"
+                 formControlName="tecnologia" 
+                    required />
+            </div>
+            <div class="form-group">
+                    <label for="porcentaje">Porcentaje</label>
+                    <input type="number" name="porcentaje" class="form-control" id="porcentaje"
+                       formControlName="porcentaje" required />
+            </div>
+            <div class="form-group">
+                        <label for="urlImagen">urlImagen</label>
+                        <input type="text" name="urlImagen" class="form-control" id="urlImagen"
+                         formControlName="urlImagen"  />
+            </div>
+            
+  
+          <div class="form-group text-left">
+            <button type="submit"class="btn btn-outline-success btn-block mt-3" [disabled]="!f.valid">
+              <i class="fas fa-plus-circle"></i> Agregar
+            </button>
+            <button type="button" class="btn btn-outline-primary btn-block mt-3" routerLink="/educacion">
+              <i class="fas fa-arrow-alt-circle-left"></i> Volver
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

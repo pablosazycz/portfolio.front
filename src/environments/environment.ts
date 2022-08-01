@@ -5,7 +5,12 @@
 export const environment = {
   production: true,
   eduUrl: 'http://localhost:8080/educacion/',
-  authURL: 'http://localhost:8080/auth/'
+  authURL: 'http://localhost:8080/auth/',  domUrl:'http://localhost:8080/domicilio/',
+  expUrl:'http://localhost:8080/experiencialaboral/',
+  persUrl:'http://localhost:8080/persona/',
+  proyUrl:'http://localhost:8080/proyecto/',
+  tecUrl:'http://localhost:8080/tecnologia/',
+ 
 
 };
 

@@ -1,1 +1,42 @@
-<p>proyecto works!</p>
+<div class="container ">
+
+    <h4 class="card-title text-center">Proyectos</h4>
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+      <!-- Button para Agregar Educacion -->
+      <div class="text-center">
+        <button *ngIf="isAdmin" type="button" class="btn btn-primary" data-bs-toggle="modal" routerLink="proyecto/nuevo">
+          Agregar Educación
+        </button>
+      </div>
+  
+  
+      <div class="container p-2 ">
+        <div *ngFor="let Proyecto of proyectos" class="row p-2 m-2 border shadow p-3 mb-5 bg-body rounded">
+          <div class="col-2 ">
+            <img class=" img-fluid " src="{{Proyecto.urlImagen}}">
+  
+          </div>
+          <div class="col-10 ">
+            <h3>{{Proyecto.nombre}}</h3>
+            
+            <div class="border-bottom">{{Proyecto.descripcion}}</div> 
+            <div class="border-bottom">{{Proyecto.urlProyecto}}</div>
+          
+           </div>
+           <div class="col">
+            <!--Boton editar forma de Lapiz - Solo aparece si esta logueado-->
+           <div class="flex-row align-items-center"> <button *ngIf="isAdmin" type="button" class="btn" aria-label="Editar" data-toggle="tooltip" data-placement="right" title="Editar"
+              routerLink="proyecto/editar/{{Proyecto.id}}">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+          
+            <!--Boton eliminar forma de tacho de basura - Solo aparece si esta logueado-->
+          <button *ngIf="isAdmin" type="button" class="btn text" aria-label="Eliminar" data-toggle="tooltip" data-placement="right" title="Eliminar"
+              (click)="eliminarProyecto(Proyecto.id)">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

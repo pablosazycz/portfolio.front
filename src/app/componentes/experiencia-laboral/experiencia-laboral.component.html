@@ -1,1 +1,49 @@
-<p>experiencia-laboral works!</p>
+<div class="container-fluid ">
+
+    <h4 class="card-title text-center">Experiencia Laboral</h4>
+    <div class="container shadow p-3 mb-5 bg-body rounded">
+      <!-- Button para Agregar Educacion -->
+      <div class="text-center">
+        <button *ngIf="isAdmin" type="button" class="btn btn-primary" data-bs-toggle="modal" routerLink="experiencialaboral/nuevo">
+          Agregar Experiencia
+        </button>
+      </div>
+  
+  
+      <div class="container p-2 ">
+        <div *ngFor="let ExperienciaLaboral of experiencias" class="row p-2 m-2 border shadow p-3 mb-5 bg-body rounded">
+          <div class="col-2">
+            <img  class="img-fluid" id="imagenExp" src="{{ExperienciaLaboral.urlImagen}}"/>
+  
+          </div>
+          <div class="col-10">
+
+            <h3>{{ExperienciaLaboral.puesto}}</h3>
+            <h5 class="border-bottom">{{ExperienciaLaboral.empresa}}</h5>
+            <div class="border-bottom">{{ExperienciaLaboral.actividad_empresa}}</div>
+            
+            <div class="border-bottom">{{ExperienciaLaboral.nivel_experiencia}}</div>
+            <div class="border-bottom">{{ExperienciaLaboral.area_puesto}}</div>
+            <div class="border-bottom">{{ExperienciaLaboral.pais}}</div>
+            <div class="border-bottom">{{ExperienciaLaboral.descripcion_tarea}}</div>
+            <div class="border-bottom">{{ExperienciaLaboral.personas_cargo}}</div>
+            <span class="text-secondary">({{ExperienciaLaboral.fecha_inicio}} - {{ExperienciaLaboral.fecha_finalizacion}})</span>
+          </div>
+          <div class="col">
+            <!--Boton editar forma de Lapiz - Solo aparece si esta logueado-->
+           <div class="flex-row align-items-center"> <button *ngIf="isAdmin" type="button" class="btn" aria-label="Editar" data-toggle="tooltip" data-placement="right" title="Editar"
+              routerLink="experiencialaboral/editar/{{ExperienciaLaboral.id}}">
+              <i class="fa-solid fa-pen-to-square"></i>
+            </button>
+          
+            <!--Boton eliminar forma de tacho de basura - Solo aparece si esta logueado-->
+          <button *ngIf="isAdmin" type="button" class="btn text" aria-label="Eliminar" data-toggle="tooltip" data-placement="right" title="Eliminar"
+              (click)="eliminarExp(ExperienciaLaboral.id)">
+              <i class="fa-solid fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
