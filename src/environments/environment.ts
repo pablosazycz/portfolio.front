@@ -3,13 +3,14 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
-  eduUrl: 'http://localhost:8080/educacion/',
-  authURL: 'http://localhost:8080/auth/',  domUrl:'http://localhost:8080/domicilio/',
-  expUrl:'http://localhost:8080/experiencialaboral/',
-  persUrl:'http://localhost:8080/persona/',
-  proyUrl:'http://localhost:8080/proyecto/',
-  tecUrl:'http://localhost:8080/tecnologia/',
+  production: false,
+  domUrl:'https://calm-headland-19303.herokuapp.com/domicilio/',
+  expUrl:'https://calm-headland-19303.herokuapp.com/experiencialaboral/',
+  persUrl:'https://calm-headland-19303.herokuapp.com/persona/',
+  proyUrl:'https://calm-headland-19303.herokuapp.com/proyecto/',
+  tecUrl:'https://calm-headland-19303.herokuapp.com/tecnologia/',
+  eduUrl: 'https://calm-headland-19303.herokuapp.com/educacion/',
+  authURL: 'https://calm-headland-19303.herokuapp.com/auth/'
  
 
 };
